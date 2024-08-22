@@ -27,7 +27,7 @@ const Hero = () => {
                     words='Transforming Concepts into Seamless User Experience'
                 />
                 <p className='text-center text-blue-100 md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                    Hi, I'm Mohamed, a Next.js Developer based in Egypt
+                    Hi, I&apos;m Mohamed, a Next.js Developer based in Egypt
                 </p>
                 <a href="#about">
                     <MagicButton 
