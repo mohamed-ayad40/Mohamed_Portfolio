@@ -119,7 +119,7 @@ export const InfiniteMovingCards = ({
               
               {/* نص الـ Testimonial */}
               <span className="relative z-20 leading-[1.6] text-sm md:text-lg text-white font-normal block min-h-[100px]">
-                "{item.quote}"
+                &quot;{item.quote}&quot;
               </span>
 
               {/* بيانات الشخص المتحدث */}
