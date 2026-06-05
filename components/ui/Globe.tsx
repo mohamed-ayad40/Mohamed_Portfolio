@@ -187,7 +187,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashAnimateTime((e) => defaultProps.arcTime);
 
     globeRef.current
-      .pointsData(data)
+      .pointsData(globeData)
       .pointColor((e) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
