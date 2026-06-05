@@ -77,34 +77,34 @@ export const navItems = [
       img: "/clinic.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/re.svg", "/ai.svg"],
       liveLink: "https://smart-clinic-swart.vercel.app/",
-      repoLink: "https://github.com/mohamed-ayad40/smart-ai-clinic", // حط رابط الريبو الحقيقي هنا
+      repoLink: "https://github.com/mohamed-ayad40/smart-clinic-frontend", // حط رابط الريبو الحقيقي هنا
     },
     {
       id: 2,
       title: "Real-Time Communication Platform",
       des: "Scalable chat & P2P video streaming platform using Socket.io and native WebRTC, containerized via Docker.",
       img: "/whatsapp.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/dock.svg", "/web-socket.svg", "/firebase.svg"],
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/dock.svg", "/node-js.svg", "/websocket.svg", "/firebase.svg"],
       liveLink: "https://whatsapp-client-delta.vercel.app/",
-      repoLink: "https://github.com/mohamed-ayad40/whatsapp-clone", // حط رابط الريبو الحقيقي هنا
+      repoLink: "https://github.com/mohamed-ayad40/Whatsapp-client", // حط رابط الريبو الحقيقي هنا
     },
     {
       id: 3,
       title: "Full-Fledged E-Commerce Engine",
       des: "End-to-end commercial platform featuring a dynamic shopping cart, order management, and secure payments.",
       img: "/amazon.png",
-      iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/stripe.svg", "/firebase.svg"],
+      iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/node-js.svg", "/stripe.svg", "/firebase.svg"],
       liveLink: "https://clone-7044a.web.app/",
-      repoLink: "https://github.com/mohamed-ayad40/amazon-clone", // حط رابط الريبو الحقيقي هنا
+      repoLink: "https://github.com/mohamed-ayad40/Amazon-Clone-1", // حط رابط الريبو الحقيقي هنا
     },
     {
       id: 4,
       title: "Agricultural Transport & Personnel Dispatch System",
       des: "A clean, highly operational web platform designed to automate sugar beet transport logistics. Features role-based dashboards for gate officers, admins, and supervisors to track vehicle check-ins and personnel shifts.",
       img: "/military_project.png", 
-      iconLists: ["/re.svg", "/tail.svg", "/node.svg", "/mongodb.svg"], 
+      iconLists: ["/re.svg", "/tail.svg", "/node-js.svg", "/mongo.svg"], 
       liveLink: "https://transport-management-frontend-azure.vercel.app/login",
-      repoLink: "https://github.com/mohamed-ayad40/military-transport-system", // حط رابط الريبو الحقيقي هنا
+      repoLink: "https://github.com/mohamed-ayad40/Transport-Management---Frontend", // حط رابط الريبو الحقيقي هنا
     },
   ];
   
@@ -145,7 +145,7 @@ export const navItems = [
   {
     id: 3,
     name: "huggingface",
-    img: "/hf.svg", // هقولك تجيب دول منين حالا
+    img: "/huggingface.svg", 
     nameImg: "/hfName.svg",
   },
   {
@@ -153,6 +153,24 @@ export const navItems = [
     name: "docker.",
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
+  },
+  {
+    id: 5,
+    name: "nginx",
+    img: "/nginx.svg",
+    nameImg: "/nginxName.svg",
+  },
+  {
+    id: 6,
+    name: "github-actions",
+    img: "/githubactions.svg",
+    nameImg: "/ghaName.svg",
+  },
+    {
+    id: 7,
+    name: "redis",
+    img: "/redis.svg",
+    nameImg: "/redisName.svg",
   },
 ];
   
@@ -190,7 +208,7 @@ export const navItems = [
       id: 3,
       img: "/link.svg",
       title: "LinkedIn",
-      link: "https://www.linkedin.com/in/mohamedayad4000"
+      link: "https://www.linkedin.com/in/mo-ayad"
     },
     {
       id: 4,

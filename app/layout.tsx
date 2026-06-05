@@ -16,16 +16,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    /* ✅ تم إضافة suppressHydrationWarning هنا لإسكات تنبيهات كلاسات الثيم */
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-      <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-          >
+        >
           {children}
-      </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

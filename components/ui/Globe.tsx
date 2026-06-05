@@ -67,6 +67,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         size: number;
         order: number;
         color: (t: number) => string;
+        colorStr: string; // أضفنا النوع هنا لمنع مشاكل الـ TypeScript
         lat: number;
         lng: number;
       }[]
@@ -120,17 +121,22 @@ export function Globe({ globeConfig, data }: WorldProps) {
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
+      
+      // حفظنا الـ colorStr كـ نص صريح (String) لمنع أخطاء الـ Shaders
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
+        colorStr: arc.color, 
         lat: arc.startLat,
         lng: arc.startLng,
       });
+      
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
+        colorStr: arc.color,
         lat: arc.endLat,
         lng: arc.endLng,
       });
@@ -188,14 +194,15 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .pointsData(globeData)
-      .pointColor((e) => (e as { color: string }).color)
+      .pointColor((e: any) => e.colorStr) // تم التعديل ليقرأ الـ String مباشرة لمنع الـ TypeError
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
 
     globeRef.current
       .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
+      // باصينا مصفوفة نصوص واضحة للـ GPU عشان يعمل الـ Fade-out من لون الأرك للشفافية
+      .ringColor((e: any) => [e.colorStr, "rgba(0,0,0,0)"])
       .ringMaxRadius(defaultProps.maxRings)
       .ringPropagationSpeed(RING_PROPAGATION_SPEED)
       .ringRepeatPeriod(

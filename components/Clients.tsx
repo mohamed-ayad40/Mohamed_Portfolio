@@ -1,11 +1,13 @@
 import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 import { companies, testimonials } from '@/data'
+
 const Clients = () => {
     const worked = true;
   return (
     <div className='py-20' id="testimonials">
-        <h1 className='heading'>
+        {/* ✅ زودنا mb-10 و md:mb-16 عشان ندي سبيس توازن محترم تحت العنوان */}
+        <h1 className='heading mb-10 md:mb-16'>
             Kind words from 
             <span className='text-purple'> satisfied clients</span>
         </h1>
@@ -29,4 +31,4 @@ const Clients = () => {
   )
 }
 
-export default Clients
+export default Clients;
